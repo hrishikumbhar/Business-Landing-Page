@@ -54,6 +54,13 @@ body {
     background-color: transparent;
 }
 
+.hamburger {
+    display: none;
+}
+.mobile-list {
+    display: none;
+}
+
 /* .btn {
     border: none;
     font-weight: 600;
@@ -61,6 +68,50 @@ body {
     color: #FFFFFF;
     cursor: pointer;
 } */
+
+@media only screen and (max-width: 1108px) {
+    .navbar .logo {
+        flex: 1.2;
+    }
+}
+@media only screen and (max-width: 925px) {
+    .navbar {
+        padding: 0 20px;
+        position: relative;
+    }
+    .show-navbar {
+        display: flex !important;
+    }
+    .mobile-list {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        top: 90px;
+        list-style-type: none;
+        background-color: var(--bg-gray);
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+    }
+    .mobile-list a {
+        text-decoration: none;
+        color: #FFFFFF;
+        font-weight: 500;
+    }
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .navbar .list {
+        display: none;
+    }
+    .navbar .list ~ div {
+        display: none;
+    }
+}
+
 
 /* Hero Section */
 
@@ -129,6 +180,57 @@ body {
     background-color: #8bb7a2;
 }
 
+@media only screen and (max-width: 1149px) {
+    .hero .hero-right h1 {
+        font-size: 2.8rem;
+        line-height: 50px;
+    }
+    .hero .hero-right p {
+        font-size: 1rem;
+        margin-top: 20px;
+    }
+    .hero .hero-right .contact-email input[type="email"] {
+        padding: 22px 190px 22px 20px;
+        width: 12rem;
+    }
+    .hero .hero-right .contact-email button  {
+        top: 5px;
+        right: 15px;
+    }
+    .hero-left .hero-img {
+        width: 22rem;
+        height: 420px;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .hero {
+        gap: 20px;
+        flex-wrap: wrap;
+        height: auto;
+        align-items: center;
+        margin: 0 20px 20px 20px;
+        justify-content: center;
+    }
+    .hero .hero-right h1 {
+        text-align: center;
+        padding-left: 10px;
+        font-size: 2.4rem;
+        line-height: 40px;
+    }
+    .hero .hero-right p {
+        text-align: center;
+        padding: 0 20px;
+        line-height: 24px;
+        font-size: 14px;
+    }
+    .hero .hero-right .contact-email input[type="email"] {
+        padding: 22px 200px 22px 20px;
+        width: 12rem;
+        display: block;
+    }
+
+ }
+
 /* Connecting Section */
 
 .connecting-container {
@@ -193,6 +295,12 @@ body {
     padding-bottom: 60px;
 }
 
+@media only screen and (max-width: 740px) {
+    .connecting .connecting-cards .connecting-card {
+        flex-wrap: wrap;
+    }
+}
+
 /* Webdesign Section */
 
 .webdesign-container {
@@ -219,6 +327,7 @@ body {
     justify-content: center;
     gap: 90px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .web-design .webdesign-left h4{
@@ -257,6 +366,19 @@ body {
     object-position: right;
 }
 
+@media only screen and (max-width: 1134px) {
+    .web-design .webdesign-left h4 {
+        font-size: 1.8rem;
+    }
+    .webdesign .webdesign-left p {
+        font-size: .9rem;
+    }
+    .webdesign-right .webdesign-img {
+        width: 24rem;
+        height: 400px;
+    }
+}
+
 /* Client Section */
 
 .client-container {
@@ -276,6 +398,11 @@ body {
     justify-content: center;
     gap: 90px;
     align-items: center;
+    flex-wrap: wrap;
+}
+
+.client .client-right {
+    order: 2;
 }
 
 .client .client-right h4{
@@ -284,6 +411,10 @@ body {
     font-weight: 700;
     padding-bottom: 30px;
 
+}
+
+.client .client-left {
+    order: 1;
 }
 
 .client .client-right p {
@@ -315,6 +446,31 @@ body {
     background-color: #8bb7a2;
 }
 
+@media only screen and (max-width: 1134px) {
+    .client .client-right h4 {
+        font-size: 1.8rem;
+    }
+    .client .client-right p {
+        font-size: .9rem;
+    }
+    .client-left .client-img {
+        width: 24rem;
+        height: 400px;
+    }
+    .client-container {
+        top: 320vh;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    .client-container  {
+        top: 370vh;
+    }
+    .client .client-right {
+        order: -1;
+    }
+}
+
 /* Marketting Section */
 
 .market{
@@ -325,6 +481,7 @@ body {
     gap: 90px;
     align-items: center;
     padding-top: 40px;
+    flex-wrap: wrap;
 }
 
 .market .market-left h4{
@@ -363,6 +520,19 @@ body {
     background-color: #8bb7a2;
 }
 
+@media only screen and (max-width: 1134px) {
+    .market .market-left h4 {
+        font-size: 1.8rem;
+    }
+    .market .market-left p {
+        font-size: .9rem;
+    }
+    .market-right .market-img {
+        width: 24rem;
+        height: 400px;
+    }
+}
+
 
 /* Team Section */
 
@@ -376,6 +546,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .team-section .team-head h1{
@@ -394,6 +565,7 @@ body {
     display: flex;
     justify-content: space-between;
     padding-top: 60px;
+    flex-wrap: wrap;
 }
 
 .team-info .team-card .team-img {
@@ -450,6 +622,27 @@ body {
     background-color: #8bb7a2;
 }
 
+@media only screen and (max-width: 874px) {
+    .team-section {
+        max-width: 78rem;
+        margin: 40px auto 40px auto;
+        padding-top: 180px;
+        height: auto;
+
+    }
+    .team-section .team-head p {
+        font-size: .9rem;
+        margin-top: 10px;
+    }
+    .tema-info {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
 /* Footer Section */
 
 .footer-container{
@@ -471,12 +664,14 @@ body {
     justify-content: space-between;
     height: 180px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-container .footer .footer-logo ul {
     list-style: none;
     display: flex;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .footer-container .footer .footer-logo ul li span {
@@ -502,6 +697,7 @@ body {
     justify-content: space-between;
     padding-top: 80px;
     padding-bottom: 100px;
+    flex-wrap: wrap;
 }
 
 .footer-navbar .navbar-list h4{
@@ -519,4 +715,24 @@ body {
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1150px) {
+    .footer-container {
+        top:760vh
+    }
+    .footer-navbar {
+        gap: 40px;
+        justify-content: space-around;
+    }
+}
+@media only screen and (max-width: 857px) {
+    .footer-container {
+        top:900vh
+    }
+}
+@media only screen and (max-width: 700px) {
+    .footer-container {
+        top:980vh
+    }
 }
